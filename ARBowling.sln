@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARBowling", "Assembly-CSharp.csproj", "{156A1997-9F2A-D5F2-41E1-5A1CBAB91CFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARBowling", "Assembly-CSharp-Editor.csproj", "{B338E9CF-7D91-D1F5-7F23-322EA093DEC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{156A1997-9F2A-D5F2-41E1-5A1CBAB91CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{156A1997-9F2A-D5F2-41E1-5A1CBAB91CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{156A1997-9F2A-D5F2-41E1-5A1CBAB91CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{156A1997-9F2A-D5F2-41E1-5A1CBAB91CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B338E9CF-7D91-D1F5-7F23-322EA093DEC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B338E9CF-7D91-D1F5-7F23-322EA093DEC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B338E9CF-7D91-D1F5-7F23-322EA093DEC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B338E9CF-7D91-D1F5-7F23-322EA093DEC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
