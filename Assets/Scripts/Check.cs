@@ -28,7 +28,8 @@ public class Check : MonoBehaviour
     {
         float dist = Vector3.Distance(PinMarker.position, BallMarker.position);
         distance.text = dist + "";
-        if(ballMarkerScript.Visible==true && pinMarkerScript.Visible==true)
+
+        if (ballMarkerScript.Visible==true && pinMarkerScript.Visible==true)
         {
             twoMarkers.text = "";
         }
