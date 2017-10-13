@@ -13,11 +13,13 @@ public class Check : MonoBehaviour
     public Transform BallMarker;
     public Text distance;
     public Text twoMarkers;
+    public Text position;
 
     void Start()
     {
         distance.text = "";
         twoMarkers.text = "";
+        position.text = "";
         armarker = artoolkit.GetComponents<ARMarker>();
         GetMarkers();
     }
@@ -26,13 +28,13 @@ public class Check : MonoBehaviour
     {
         float dist = Vector3.Distance(PinMarker.position, BallMarker.position);
         distance.text = dist + "";
-        if(ballMarkerScript.Visible==true)
+        if(ballMarkerScript.Visible==true && pinMarkerScript.Visible==true)
         {
-            twoMarkers.text = "Hiro";
+            twoMarkers.text = "";
         }
         else
         {
-            twoMarkers.text = "";
+            twoMarkers.text = "The two marks have to be visible.";
         }
     }
 

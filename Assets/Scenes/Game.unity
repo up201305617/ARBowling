@@ -505,7 +505,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -46}
-  m_SizeDelta: {x: 190, y: 60}
+  m_SizeDelta: {x: 450, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &796913631
 MonoBehaviour:
@@ -1323,11 +1323,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a82a01191de1c64d921677bf423a25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  art: {fileID: 1192976671}
+  artoolkit: {fileID: 1192976671}
   PinMarker: {fileID: 535120773}
   BallMarker: {fileID: 446854239}
   distance: {fileID: 1738025507}
   twoMarkers: {fileID: 796913631}
+  position: {fileID: 1144342468}
 --- !u!4 &1308219925
 Transform:
   m_ObjectHideFlags: 0
