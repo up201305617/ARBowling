@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
-        velocity = new Vector3(0, 0, 0.5f);
+        velocity = new Vector3(0, 0, 1f);
 	}
 	
 	void Update ()
