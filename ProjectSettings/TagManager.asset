@@ -8,7 +8,6 @@ TagManager:
   - Character
   - Glove
   - Target
-  - Ball
   layers:
   - Default
   - TransparentFX
