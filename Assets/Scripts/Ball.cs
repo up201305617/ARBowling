@@ -6,11 +6,11 @@ public class Ball : MonoBehaviour
 {
     private Rigidbody rb;
     private Vector3 velocity;
-
+    
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
-        velocity = new Vector3(0, 0, 1f);
+        velocity = new Vector3(0, 0, 3f);
 	}
 	
 	void Update ()

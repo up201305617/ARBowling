@@ -14,6 +14,7 @@ public class Check : MonoBehaviour
     public Text distance;
     public Text twoMarkers;
     public Text position;
+    public Slider power;
 
     void Start()
     {
@@ -37,6 +38,8 @@ public class Check : MonoBehaviour
         {
             twoMarkers.text = "The two marks have to be visible.";
         }
+
+        //position.text = power.value + "";
     }
 
     private void GetMarkers()
