@@ -14,6 +14,7 @@ public class Check : MonoBehaviour
     public Text distance;
     public Text twoMarkers;
     public Text position;
+    public Text pins;
     public Slider power;
 
     void Start()
@@ -21,6 +22,7 @@ public class Check : MonoBehaviour
         distance.text = "";
         twoMarkers.text = "";
         position.text = "";
+        pins.text = "";
         armarker = artoolkit.GetComponents<ARMarker>();
         GetMarkers();
     }
@@ -38,7 +40,7 @@ public class Check : MonoBehaviour
         {
             twoMarkers.text = "The two marks have to be visible.";
         }
-
+        pins.text = Pin.pinsStanding + "";
         //position.text = power.value + "";
     }
 

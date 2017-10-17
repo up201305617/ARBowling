@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23159993744604242}
   - component: {fileID: 54810991200187226}
   - component: {fileID: 65969269051557752}
+  - component: {fileID: 114157848712583352}
   m_Layer: 8
   m_Name: Pin
   m_TagString: Untagged
@@ -110,3 +111,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.9373116, y: 4.93731, z: 16.298536}
   m_Center: {x: -0.00000059604673, y: -0.0014394525, z: -0.8766494}
+--- !u!114 &114157848712583352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1756036426665402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ae965fb8db9d44fa2c045b3214cff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

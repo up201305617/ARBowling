@@ -245,6 +245,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 175623421}
+--- !u!1 &223946178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 223946179}
+  - component: {fileID: 223946181}
+  - component: {fileID: 223946180}
+  m_Layer: 5
+  m_Name: Pins
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &223946179
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223946178}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1842525221}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80, y: -15}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &223946180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223946178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 68ce076f040b6724c9145da724fecf2f, type: 3}
+    m_FontSize: 25
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &223946181
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223946178}
 --- !u!1001 &330570680
 Prefab:
   m_ObjectHideFlags: 0
@@ -833,8 +907,8 @@ MonoBehaviour:
   StereoEye: 1
   Optical: 0
   OpticalParamsFilenameIndex: 0
-  OpticalParamsFilename: 
-  OpticalParamsFileContents: 
+  OpticalParamsFilename: optical_param_left
+  OpticalParamsFileContents: 4028ee4b400000003ff89143c00000003fefde7080000000bfa796c7000000003fb3d7168000000000000000000000003fa99eca000000003fefd45780000000bfa88e06c00000000000000000000000bfb3480bc00000003faa7095c00000003fefc5d8800000000000000000000000405ca8eb40000000c02c3ae540000000c038fe3ba00000003ff0000000000000
   OpticalEyeLateralOffsetRight: 0
 --- !u!81 &597956062
 AudioListener:
@@ -2161,6 +2235,7 @@ MonoBehaviour:
   distance: {fileID: 1738025507}
   twoMarkers: {fileID: 796913631}
   position: {fileID: 1144342468}
+  pins: {fileID: 223946180}
   power: {fileID: 596656951}
 --- !u!4 &1308219925
 Transform:
@@ -2882,6 +2957,7 @@ RectTransform:
   - {fileID: 596656950}
   - {fileID: 1398611429}
   - {fileID: 175623422}
+  - {fileID: 223946179}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
