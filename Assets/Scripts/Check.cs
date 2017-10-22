@@ -16,6 +16,7 @@ public class Check : MonoBehaviour
     public Text position;
     public Text pins;
     public Slider power;
+    public static int pinsStanding;
 
     void Start()
     {
@@ -40,7 +41,12 @@ public class Check : MonoBehaviour
         {
             twoMarkers.text = "The two marks have to be visible.";
         }
-        pins.text = Pin.pinsStanding + "";
+
+        if(pinsStanding >= 0)
+        {
+            pins.text = pinsStanding + "";
+        }
+
         //position.text = power.value + "";
     }
 
