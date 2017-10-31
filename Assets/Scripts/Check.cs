@@ -17,6 +17,10 @@ public class Check : MonoBehaviour
     public Text pins;
     public Slider power;
     public static int pinsStanding;
+    public bool isPlayerTurn;
+    public GameObject playerBall;
+    public GameObject aiBall;
+    public bool isTwo;
 
     void Start()
     {
@@ -26,6 +30,9 @@ public class Check : MonoBehaviour
         pins.text = "";
         armarker = artoolkit.GetComponents<ARMarker>();
         GetMarkers();
+        isPlayerTurn = false;
+        playerBall.SetActive(false);
+        aiBall.SetActive(true);
     }
 
     void Update()
@@ -48,6 +55,20 @@ public class Check : MonoBehaviour
         }
 
         //position.text = power.value + "";
+
+        if (isTwo)
+        {
+            if (isPlayerTurn)
+            {
+                playerBall.SetActive(true);
+                aiBall.SetActive(false);
+            }
+            else
+            {
+                playerBall.SetActive(false);
+                aiBall.SetActive(true);
+            }
+        }
     }
 
     private void GetMarkers()

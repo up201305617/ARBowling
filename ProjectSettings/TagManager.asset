@@ -10,6 +10,8 @@ TagManager:
   - Target
   - Ball
   - Ground
+  - Pin
+  - Check
   layers:
   - Default
   - TransparentFX
