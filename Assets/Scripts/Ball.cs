@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour
     private Vector3 velocity;
     private Vector3 initialPosition;
     private Check check;
+    public static int points;
 
     void Start ()
     {
@@ -15,18 +16,13 @@ public class Ball : MonoBehaviour
         initialPosition = transform.position;
         velocity = new Vector3(0, 0, 1f);
         check = FindObjectOfType<Check>();
+        points = 0;
 	}
 	
 	void Update ()
     {
 		
 	}
-
-    void FixedUpdate()
-    {
-        //if(Input.GetKeyDown(KeyCode.Space))
-            //rb.velocity = velocity;
-    }
 
     public void RightArrow()
     {
