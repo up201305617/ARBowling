@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     private Rigidbody rb;
+    private int launch;
     private Vector3 velocity;
     private Vector3 initialPosition;
     private Check check;
@@ -17,6 +18,7 @@ public class Ball : MonoBehaviour
         velocity = new Vector3(0, 0, 1f);
         check = FindObjectOfType<Check>();
         points = 0;
+        launch = 2;
 	}
 	
 	void Update ()
@@ -36,8 +38,20 @@ public class Ball : MonoBehaviour
 
     public void LaunchBall()
     {
-        velocity = velocity * check.power.value;
-        rb.velocity = velocity;
+        if(launch > 0)
+        {
+            velocity = velocity * check.power.value;
+            rb.velocity = velocity;
+        }
+    }
+
+    public void Next()
+    {
+        if(launch > 0)
+        {
+            launch--;
+            Reset();
+        }
     }
 
     public void Reset()

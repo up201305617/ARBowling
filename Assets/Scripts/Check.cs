@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Check : MonoBehaviour
 {
@@ -37,6 +38,11 @@ public class Check : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
+
         float dist = Vector3.Distance(PinMarker.position, BallMarker.position);
         distance.text = dist + "";
 

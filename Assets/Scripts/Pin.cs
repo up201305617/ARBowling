@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class Pin : MonoBehaviour
 {
-    public Transform originalOrientation;
+    private Rigidbody rb;
+    private Transform originalOrientation;
     private bool standing;
     public static int pinsStanding;
     public Transform groundCheck;
@@ -14,7 +15,9 @@ public class Pin : MonoBehaviour
     {
         Check.pinsStanding++;
         originalOrientation = transform;
+        Debug.Log(originalOrientation);
         standing = true;
+        rb=GetComponent<Rigidbody>();
 	}
 	
 	void Update ()
@@ -36,6 +39,7 @@ public class Pin : MonoBehaviour
 
     public void Reset()
     {
+        rb.velocity = Vector3.zero;
         Check.pinsStanding++;
         standing = true;
         transform.position = originalOrientation.position;
