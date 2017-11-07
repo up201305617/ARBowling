@@ -25,11 +25,16 @@ public class ResetPins : MonoBehaviour
     private Transform original8;
     private Transform original9;
     private Transform original10;
-
+    private Transform temp;
+    private bool firstTime;
     public GameObject pinPrefab;
+    public GameObject prefab;
+    public GameObject old;
+    public Transform marker;
 
     void Start()
     {
+        firstTime = true;
         original1 = pin_1.transform;
         original2 = pin_2.transform;
         original3 = pin_3.transform;
@@ -40,6 +45,12 @@ public class ResetPins : MonoBehaviour
         original8 = pin_8.transform;
         original9 = pin_9.transform;
         original10 = pin_10.transform;
+
+        if (firstTime)
+        {
+            temp = old.transform;
+            firstTime = false;
+        }
     }
 
     void Update()
@@ -47,33 +58,10 @@ public class ResetPins : MonoBehaviour
 
     }
 
-    public void Reset()
-    {
-        //if(!pin_1.GetComponent<Pin>().GetStanding())
-            pin_1.GetComponent<Pin>().Reset();
-        //if (!pin_2.GetComponent<Pin>().GetStanding())
-            pin_2.GetComponent<Pin>().Reset();
-        //if (!pin_3.GetComponent<Pin>().GetStanding())
-            pin_3.GetComponent<Pin>().Reset();
-        //if (!pin_4.GetComponent<Pin>().GetStanding())
-            pin_4.GetComponent<Pin>().Reset();
-        //if (!pin_5.GetComponent<Pin>().GetStanding())
-            pin_5.GetComponent<Pin>().Reset();
-        //if (!pin_6.GetComponent<Pin>().GetStanding())
-            pin_6.GetComponent<Pin>().Reset();
-        //if (!pin_7.GetComponent<Pin>().GetStanding())
-            pin_7.GetComponent<Pin>().Reset();
-        //if (!pin_8.GetComponent<Pin>().GetStanding())
-            pin_8.GetComponent<Pin>().Reset();
-        //if (!pin_9.GetComponent<Pin>().GetStanding())
-            pin_9.GetComponent<Pin>().Reset();
-        //if (!pin_10.GetComponent<Pin>().GetStanding())
-            pin_10.GetComponent<Pin>().Reset();
-    }
-
     public void Restart()
     {
-        Destroy(pin_1);
-        Instantiate(pinPrefab, original1);
+        Destroy(old);
+        old = (GameObject)Instantiate(prefab, marker.position, Quaternion.Euler(90, 0, 0));
+        Check.pinsStanding = 0;
     }
 }
