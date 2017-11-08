@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Solo_Easy.unity
     guid: 418794ca0c0a2f7498bf194dbf9b3e79
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/871f4024caf7117419aa140f560b249a
+    guid: 871f4024caf7117419aa140f560b249a
   - enabled: 1
     path: Assets/Scenes/Solo_Hard.unity
-    guid: 871f4024caf7117419aa140f560b249a
+    guid: f5e0ae03a2a549c44b2a556e6b86fda0
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 90615b74a43d3fa4c886bb8df633708f
