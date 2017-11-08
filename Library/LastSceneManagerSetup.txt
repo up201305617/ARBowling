@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Solo_Hard.unity
+- path: Assets/Scenes/Solo_Easy.unity
   isLoaded: 1
   isActive: 1

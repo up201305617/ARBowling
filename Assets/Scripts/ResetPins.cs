@@ -6,10 +6,11 @@ public class ResetPins : MonoBehaviour
 {
     private Transform temp;
     private bool firstTime;
+    public GameObject ball;
     public GameObject prefabPinSet;
     public GameObject oldPinSet;
     public Transform markerPosition;
-
+   
     void Start()
     {
         firstTime = true;
@@ -31,5 +32,6 @@ public class ResetPins : MonoBehaviour
         Destroy(oldPinSet);
         oldPinSet = (GameObject)Instantiate(prefabPinSet, markerPosition.position, Quaternion.Euler(90, 0, 0));
         Check.pinsStanding = 0;
+        ball.GetComponent<Ball>().NextRound();
     }
 }

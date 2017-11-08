@@ -24,7 +24,7 @@ public class Pin : MonoBehaviour
     {
        if(!standing)
         {
-            //Destroy(gameObject, 10f);
+            Destroy(gameObject, 5.0f);
         }
 	}
 
