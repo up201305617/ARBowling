@@ -15,7 +15,6 @@ public class Pin : MonoBehaviour
     {
         Check.pinsStanding++;
         originalOrientation = transform;
-        Debug.Log(originalOrientation);
         standing = true;
         rb=GetComponent<Rigidbody>();
 	}

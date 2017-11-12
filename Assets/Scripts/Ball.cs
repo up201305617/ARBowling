@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Ball : MonoBehaviour
     private Check check;
     public static int points;
     public GameObject restartGame;
+    public Text textPoints;
 
     void Start ()
     {
@@ -23,6 +25,7 @@ public class Ball : MonoBehaviour
         points = 0;
         launch = 2;
         rounds = 10;
+        textPoints.text = "0 Pts";
 	}
 
     void Points()
@@ -55,30 +58,47 @@ public class Ball : MonoBehaviour
 
     public void LaunchBall()
     {
-        if(launch > 0)
+        if (Check.proximity && Check.canLaunch)
         {
-            velocity = velocity * check.power.value;
-            rb.velocity = velocity;
+            if (launch > 0)
+            {
+                velocity = velocity * check.power.value;
+                rb.velocity = velocity;
+            }
         }
     }
 
     public void Next()
     {
-        if(launch > 0)
+        if (launch > 0)
         {
-            launch--;
-            Reset();
+            if (Check.pinsStanding == 0)
+            {
+                restartGame.GetComponent<ResetPins>().Restart();
+                points += 20;
+                textPoints.text = points + " Pts";
+            }
+            else
+            {
+                launch--;
+                Reset();
+            }
         }
-        if(launch == 0)
+
+        if (launch == 0)
         {
             rounds--;
             //NextRound();
+            points += 10 - Check.pinsStanding;
             restartGame.GetComponent<ResetPins>().Restart();
+            textPoints.text = points + " Pts";
         }
-        if(rounds == 0)
+
+        if (rounds == 0)
         {
             SceneManager.LoadScene(3);
         }
+        
     }
 
     public void Reset()
