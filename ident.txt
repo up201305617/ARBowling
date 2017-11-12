@@ -1,0 +1,13 @@
+Realidade Virtual e Aumentada
+1º Projeto
+ARBowling
+
+Grupo:
+Paulo Jorge Silva Ferreira
+up201305617@fe.up.pt
+
+Tecnologias:
+Para desenvolver este projeto utilizou-se o ARToolkit + Unity.
+O ARToolkit é uma biblioteca para desenvolvimento de aplicações de realidade aumentada.
+O Unity é um motor de jogo usado para o desenvolvimento de jogos e simuladores.
+Para utilizar as duas tecnologias recorreu-se ao "ARToolkit for Unity", um plugin do ARTookit para Unity.

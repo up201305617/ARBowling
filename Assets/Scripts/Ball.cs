@@ -28,24 +28,6 @@ public class Ball : MonoBehaviour
         textPoints.text = "0 Pts";
 	}
 
-    void Points()
-    {
-        int tempPoints = 0;
-
-        if (launch == 1)
-        {
-            tempPoints = 10 - Check.pinsStanding;
-            points += (10 - Check.pinsStanding) * 2;
-        }
-        else
-            points += tempPoints - Check.pinsStanding;
-    }
-
-	void Update ()
-    {
-        //Points();
-	}
-
     public void RightArrow()
     {
         this.transform.Translate(new Vector3(+0.01f, 0, 0));
